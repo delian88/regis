@@ -19,6 +19,8 @@ import {
   ChevronRight,
   ShieldAlert,
   Send,
+  Video,
+  Play,
 } from 'lucide-react';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useFavorites } from '@/context/FavoritesContext';
@@ -37,7 +39,7 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
     name: '',
     email: '',
     phone: '',
-    message: `Hello, I am interested in "${property.title}" listed on Nigeria Property Centre. Please contact me with more information.`,
+    message: `Hello, I am interested in "${property.title}" listed on Regis Integrated Services Limited. Please contact me with more information.`,
   });
 
   const [loanYears, setLoanYears] = useState(15);
@@ -63,7 +65,7 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
     if (navigator.share) {
       navigator.share({
         title: property.title,
-        text: `Check out this property on Nigeria Property Centre: ${property.title}`,
+        text: `Check out this property on Regis Integrated Services Limited: ${property.title}`,
         url: window.location.href,
       }).catch(() => {});
     } else {
@@ -72,9 +74,24 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
     }
   };
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setInquirySent(true);
+    try {
+      await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: inquiryForm.name,
+          phone: inquiryForm.phone,
+          email: inquiryForm.email,
+          propertyInterest: property.title,
+          message: inquiryForm.message,
+        }),
+      });
+      setInquirySent(true);
+    } catch {
+      setInquirySent(true);
+    }
   };
 
   return (
@@ -142,6 +159,60 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
               </div>
             )}
           </div>
+
+          {/* Virtual Video Tour Walkthrough Player (If Available) */}
+          {(property.videoUrl || (property.videos && property.videos.length > 0)) && (
+            <div className="rounded-2xl overflow-hidden bg-slate-950 border border-amber-500/30 p-5 space-y-4 shadow-xl">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30">
+                    <Video className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-bold text-white flex items-center gap-2">
+                      <span>Virtual Video Tour Walkthrough</span>
+                      <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-amber-500 text-slate-950">
+                        Official Regis Video
+                      </span>
+                    </h2>
+                    <p className="text-[11px] text-slate-400">
+                      Explore the live onsite views, interior marble finishes, and architectural elevation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/10">
+                {(() => {
+                  const url = property.videoUrl || (property.videos && property.videos[0]) || '';
+                  if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                    const embedUrl = url.includes('watch?v=')
+                      ? url.replace('watch?v=', 'embed/')
+                      : url.includes('youtu.be/')
+                      ? url.replace('youtu.be/', 'www.youtube.com/embed/')
+                      : url;
+                    return (
+                      <iframe
+                        src={embedUrl}
+                        title="Virtual Video Tour"
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    );
+                  }
+                  return (
+                    <video
+                      src={url}
+                      controls
+                      className="w-full h-full object-cover"
+                      poster={property.images[0]}
+                    />
+                  );
+                })()}
+              </div>
+            </div>
+          )}
 
           {/* Heading, Price, Actions */}
           <div className="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] shadow-sm">

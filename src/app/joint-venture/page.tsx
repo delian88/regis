@@ -5,7 +5,7 @@ import { CatalogPageContent } from '@/components/CatalogPageContent';
 import { getProperties } from '@/db';
 
 export const metadata = {
-  title: 'Joint Venture (JV) Land & Developments in Nigeria | Nigeria Property Centre',
+  title: 'Joint Venture (JV) Land & Property Partnerships — Regis Integrated Services Limited',
   description: 'Explore verified joint venture property and land deals in prime locations across Ikoyi, Lekki, Victoria Island, and Abuja for reputable real estate developers.',
 };
 

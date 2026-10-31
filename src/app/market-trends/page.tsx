@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer';
 import { MarketTrendsClient } from './MarketTrendsClient';
 
 export const metadata = {
-  title: 'Nigeria Real Estate Market Trends & Price Index | Nigeria Property Centre',
+  title: 'Nigeria Real Estate Market Trends & Price Index — Regis Integrated Services Limited',
   description: 'Explore verified market trends, average house prices, rental rates, and investment yields across Lagos, Abuja, Port Harcourt, and major Nigerian cities.',
 };
 

@@ -42,7 +42,10 @@ export const properties = pgTable('properties', {
   isShared: boolean('is_shared').default(false).notNull(),
   isFeatured: boolean('is_featured').default(false).notNull(),
   isVerified: boolean('is_verified').default(true).notNull(),
+  status: text('status').default('available').notNull(), // 'available' | 'selling_fast' | 'under_construction' | 'sold_out'
   images: json('images').$type<string[]>().default([]).notNull(),
+  videoUrl: text('video_url'),
+  videos: json('videos').$type<string[]>().default([]).notNull(),
   amenities: json('amenities').$type<string[]>().default([]).notNull(),
   agentId: integer('agent_id').references(() => agents.id),
   createdAt: timestamp('created_at').defaultNow().notNull(),
@@ -66,10 +69,38 @@ export const propertyRequests = pgTable('property_requests', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
+export const inspectionBookings = pgTable('inspection_bookings', {
+  id: serial('id').primaryKey(),
+  fullName: text('full_name').notNull(),
+  email: text('email').notNull(),
+  phone: text('phone').notNull(),
+  propertyInterest: text('property_interest'),
+  preferredDate: text('preferred_date'),
+  message: text('message'),
+  status: text('status').default('pending').notNull(), // 'pending' | 'contacted' | 'scheduled' | 'completed' | 'cancelled'
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
+export const siteContent = pgTable('site_content', {
+  id: text('id').primaryKey(),
+  section: text('section').notNull(),
+  data: json('data').$type<any>().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
 export const favorites = pgTable('favorites', {
   id: serial('id').primaryKey(),
   propertyId: integer('property_id').references(() => properties.id).notNull(),
   userId: text('user_id').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
+export const adminUsers = pgTable('admin_users', {
+  id: serial('id').primaryKey(),
+  email: text('email').notNull().unique(),
+  passwordHash: text('password_hash').notNull(),
+  fullName: text('full_name').notNull().default('Super Administrator'),
+  role: text('role').notNull().default('superadmin'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
@@ -92,3 +123,7 @@ export type NewProperty = typeof properties.$inferInsert;
 export type PropertyRequest = typeof propertyRequests.$inferSelect;
 export type NewPropertyRequest = typeof propertyRequests.$inferInsert;
 export type Favorite = typeof favorites.$inferSelect;
+export type AdminUser = typeof adminUsers.$inferSelect;
+export type NewAdminUser = typeof adminUsers.$inferInsert;
+export type SiteContent = typeof siteContent.$inferSelect;
+export type InspectionBooking = typeof inspectionBookings.$inferSelect;

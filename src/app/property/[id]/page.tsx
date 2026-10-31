@@ -15,10 +15,10 @@ interface PropertyPageProps {
 export async function generateMetadata({ params }: PropertyPageProps) {
   const { id } = await params;
   const property = await getPropertyById(id);
-  if (!property) return { title: 'Property Not Found - Nigeria Property Centre' };
+  if (!property) return { title: 'Property Not Found — Regis Integrated Services Limited' };
 
   return {
-    title: `${property.title} - Nigeria Property Centre`,
+    title: `${property.title} — Regis Integrated Services Limited`,
     description: property.description.slice(0, 160),
     openGraph: {
       title: property.title,

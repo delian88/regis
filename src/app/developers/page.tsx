@@ -5,7 +5,7 @@ import { getAgents } from '@/db';
 import { AgentsDirectoryClient } from '../agents/AgentsDirectoryClient';
 
 export const metadata = {
-  title: 'Accredited Property Developers in Nigeria | Nigeria Property Centre',
+  title: 'Accredited Property Developers & Partners — Regis Integrated Services Limited',
   description: 'Connect with premier real estate developers, building contractors, and master-planned community builders in Lagos, Abuja, and Nigeria.',
 };
 

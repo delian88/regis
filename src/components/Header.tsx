@@ -68,34 +68,84 @@ export function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--card)]/95 backdrop-blur-md transition-colors">
+      {/* Top Utility Bar matching regis.com.ng */}
+      <div className="w-full bg-[#0B101E] text-slate-300 text-[0.75rem] py-1.5 px-4 sm:px-6 border-b border-slate-800/80">
+        <div className="mx-auto max-w-content flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-amber-400 font-bold flex items-center gap-1.5">
+              <span>Need Help? Call:</span>
+              <a href="tel:+2348155555168" className="hover:underline text-white font-extrabold">+234 (0) 815 555 5168</a>
+            </span>
+            <span className="text-slate-600 hidden md:inline">|</span>
+            <span className="text-slate-400 hidden md:inline">22 Koforidua Street, Wuse Zone 2, Abuja</span>
+          </div>
+          <div className="flex items-center gap-4 text-xs font-semibold">
+            <Link href="/about-us" className="hover:text-amber-400 transition-colors">ABOUT US</Link>
+            <Link href="/projects" className="hover:text-amber-400 transition-colors">PROJECTS</Link>
+            <Link href="/blog" className="hover:text-amber-400 transition-colors">BLOG</Link>
+            <Link href="/contact-us" className="text-amber-400 hover:text-amber-300 transition-colors">CONTACT US</Link>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-4 sm:px-6">
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
+        {/* Regis Brand Logo */}
+        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
           <div className="flex items-center">
-            {/* Nigeria Property Centre Red Roof Mark */}
-            <div className="relative flex items-center justify-center">
-              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <rect width="36" height="36" rx="8" fill="#DC2626" />
-                <path d="M18 7L8 16H12V27H24V16H28L18 7Z" fill="white" />
-                <rect x="15" y="19" width="6" height="8" rx="1" fill="#DC2626" />
-              </svg>
+            {/* Regis Official Logo */}
+            <div className="relative h-10 flex items-center">
+              <img
+                src="https://www.regis.com.ng/wp-content/uploads/2016/07/logoconstruction.png"
+                alt="Regis Integrated Services Limited"
+                className="h-9 sm:h-10 w-auto object-contain"
+                onError={(e) => {
+                  // Fallback if image fails to load
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
             </div>
-            <div className="ml-2.5 flex flex-col">
+            <div className="ml-2 flex flex-col">
               <div className="flex items-center tracking-tight font-extrabold text-base leading-none text-[var(--foreground-strong)]">
-                <span>Nigeria</span>
-                <span className="text-[#DC2626] ml-1">Property</span>
-                <span className="ml-1">Centre</span>
+                <span className="text-amber-500">REGIS</span>
+                <span className="ml-1 text-[var(--foreground-strong)]">PROPERTIES</span>
               </div>
               <span className="text-[0.625rem] font-semibold text-[var(--foreground-muted)] tracking-wider uppercase mt-0.5">
-                Marketplace
+                Integrated Services Ltd
               </span>
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-1.5 lg:gap-2">
-          {/* Buy Menu */}
+        <nav className="hidden xl:flex items-center gap-1 lg:gap-1.5">
+          <Link
+            href="/"
+            className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+              pathname === '/' ? 'text-red-600 font-bold bg-[var(--surface-1)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground-strong)] hover:bg-[var(--surface-1)]'
+            }`}
+          >
+            Home
+          </Link>
+
+          <Link
+            href="/about-us"
+            className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+              pathname === '/about-us' ? 'text-red-600 font-bold bg-[var(--surface-1)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground-strong)] hover:bg-[var(--surface-1)]'
+            }`}
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/projects"
+            className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+              pathname === '/projects' ? 'text-red-600 font-bold bg-[var(--surface-1)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground-strong)] hover:bg-[var(--surface-1)]'
+            }`}
+          >
+            Projects
+          </Link>
+
+          {/* Building Types / Buy Menu */}
           <div className="relative">
             <button
               type="button"
@@ -104,45 +154,45 @@ export function Header() {
                 activeDropdown === 'buy' ? 'text-[var(--foreground-strong)] bg-[var(--surface-1)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground-strong)] hover:bg-[var(--surface-1)]'
               }`}
             >
-              Buy
+              Building Types
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'buy' ? 'rotate-180' : ''}`} />
             </button>
 
             {activeDropdown === 'buy' && (
               <div className="absolute left-0 mt-1.5 w-72 rounded-xl bg-[var(--card)] p-2 shadow-2xl border border-[var(--border)] animate-in fade-in zoom-in-95 duration-150 z-50">
                 <Link href="/for-sale/houses" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                  <Home className="w-4 h-4 text-red-500" />
-                  Houses
+                  <Home className="w-4 h-4 text-amber-500" />
+                  Houses & Duplexes
                 </Link>
                 <Link href="/for-sale/flats-apartments" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                  <Layers className="w-4 h-4 text-red-500" />
-                  Flats / Apartments
+                  <Layers className="w-4 h-4 text-amber-500" />
+                  Blocks of Flats
                 </Link>
                 <Link href="/for-sale/land" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                  <MapPin className="w-4 h-4 text-red-500" />
-                  Lands
+                  <MapPin className="w-4 h-4 text-amber-500" />
+                  Estate Lands (Sites & Services)
                 </Link>
                 <Link href="/for-sale/commercial" className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                  <Building className="w-4 h-4 text-red-500" />
+                  <Building className="w-4 h-4 text-amber-500" />
                   Commercial Property
                 </Link>
 
                 <div className="my-1.5 border-t border-[var(--border)]" />
                 <p className="px-3 pt-1 pb-1 text-[0.6875rem] font-bold uppercase tracking-wider text-[var(--foreground-muted)]">
-                  Browse by location
+                  Key Locations
                 </p>
                 <div className="grid grid-cols-2 gap-1 px-1">
-                  <Link href="/for-sale?state=Abuja" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                    Abuja
+                  <Link href="/for-sale?locality=Mbora" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
+                    Mbora (FHA)
                   </Link>
-                  <Link href="/for-sale?state=Lagos" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                    Lagos
+                  <Link href="/for-sale?locality=Guzape" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
+                    Guzape District
                   </Link>
-                  <Link href="/for-sale?state=Ogun" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                    Ogun
+                  <Link href="/for-sale?locality=Lugbe" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
+                    Lugbe
                   </Link>
-                  <Link href="/for-sale?state=Rivers" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
-                    Rivers
+                  <Link href="/for-sale?locality=Idu" className="rounded-md px-2.5 py-1.5 text-xs font-medium text-[var(--foreground)] hover:bg-[var(--surface-1)]">
+                    Idu Industrial
                   </Link>
                 </div>
 
@@ -154,6 +204,7 @@ export function Header() {
               </div>
             )}
           </div>
+
 
           {/* Rent Menu */}
           <div className="relative">
@@ -351,6 +402,24 @@ export function Header() {
               </div>
             )}
           </div>
+
+          <Link
+            href="/blog"
+            className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+              pathname === '/blog' ? 'text-amber-500 font-bold bg-[var(--surface-1)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground-strong)] hover:bg-[var(--surface-1)]'
+            }`}
+          >
+            Blog
+          </Link>
+
+          <Link
+            href="/contact-us"
+            className={`px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
+              pathname === '/contact-us' ? 'text-amber-500 font-bold bg-[var(--surface-1)]' : 'text-amber-500 hover:text-amber-400 hover:bg-[var(--surface-1)]'
+            }`}
+          >
+            Contact Us
+          </Link>
         </nav>
 
         {/* Right Action Tools: Currency, Theme, Auth, Post Property */}
@@ -467,7 +536,14 @@ export function Header() {
             )}
           </div>
 
-          {/* Sign In & Register */}
+          {/* Sign In & Admin */}
+          <Link
+            href="/admin"
+            className="hidden md:inline-flex items-center gap-1.5 font-bold rounded-pill text-xs px-3.5 h-9 bg-amber-500/15 text-amber-400 hover:bg-amber-500/25 border border-amber-500/30 transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span>Admin CMS</span>
+          </Link>
           <Link
             href="/login"
             className="hidden sm:inline-flex items-center justify-center font-bold rounded-pill text-xs sm:text-sm px-4 h-9 text-[var(--foreground)] hover:bg-[var(--surface-1)] transition-colors"
@@ -475,10 +551,10 @@ export function Header() {
             Sign in
           </Link>
           <Link
-            href="/advertise-list-property"
-            className="inline-flex items-center justify-center font-bold rounded-pill text-xs sm:text-sm px-4 h-9 bg-red-600 text-white hover:bg-red-700 shadow-sm transition-colors"
+            href="/admin/properties/new"
+            className="inline-flex items-center justify-center font-bold rounded-pill text-xs sm:text-sm px-4 h-9 bg-amber-500 text-slate-950 hover:bg-amber-400 shadow-sm transition-colors"
           >
-            List a property
+            Post Property
           </Link>
 
           {/* Mobile Menu Hamburger */}
@@ -501,12 +577,12 @@ export function Header() {
             {/* Drawer Header */}
             <div className="flex items-center justify-between pb-4 border-b border-[var(--border)]">
               <div className="flex items-center gap-2">
-                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="36" height="36" rx="8" fill="#DC2626" />
-                  <path d="M18 7L8 16H12V27H24V16H28L18 7Z" fill="white" />
-                  <rect x="15" y="19" width="6" height="8" rx="1" fill="#DC2626" />
-                </svg>
-                <span className="font-extrabold text-sm text-[var(--foreground-strong)]">Nigeria Property Centre</span>
+                <img
+                  src="https://www.regis.com.ng/wp-content/uploads/2016/07/logoconstruction.png"
+                  alt="Regis Integrated Services"
+                  className="h-8 w-auto object-contain"
+                />
+                <span className="font-extrabold text-xs text-[var(--foreground-strong)]">Regis Integrated Services</span>
               </div>
               <button
                 type="button"
@@ -518,34 +594,38 @@ export function Header() {
             </div>
 
             {/* Drawer Links */}
-            <div className="flex flex-col gap-3 py-4 text-sm font-semibold">
+            <div className="flex flex-col gap-2.5 py-4 text-sm font-semibold">
+              <Link href="/" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>Home</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
+              </Link>
+              <Link href="/about-us" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>About Regis Integrated Services</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
+              </Link>
+              <Link href="/projects" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>Projects & Developments</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
+              </Link>
+              <Link href="/building-types" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>Building Types & Prototypes</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
+              </Link>
               <Link href="/for-sale" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
                 <span>Properties for Sale</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
+                <ArrowRight className="w-4 h-4 text-amber-500" />
               </Link>
-              <Link href="/for-rent" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Properties for Rent</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
+              <Link href="/for-sale?type=land" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>Serviced Estate Lands</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
               </Link>
-              <Link href="/short-let" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Short Let Apartments</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
+              <Link href="/blog" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
+                <span>Blog & Insights</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
               </Link>
-              <Link href="/agents" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Estate Agents</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
-              </Link>
-              <Link href="/developers" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Property Developers</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
-              </Link>
-              <Link href="/requests" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Property Requests</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
-              </Link>
-              <Link href="/market-trends" className="flex items-center justify-between py-2 border-b border-[var(--border)]" onClick={() => setMobileMenuOpen(false)}>
-                <span>Market Trends & Reports</span>
-                <ArrowRight className="w-4 h-4 text-red-600" />
+              <Link href="/contact-us" className="flex items-center justify-between py-2 border-b border-[var(--border)] text-amber-500 font-bold" onClick={() => setMobileMenuOpen(false)}>
+                <span>Contact & Book Inspection</span>
+                <ArrowRight className="w-4 h-4 text-amber-500" />
               </Link>
             </div>
 

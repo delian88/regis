@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart, MapPin, Bed, Bath, ShieldCheck } from 'lucide-react';
+import { Heart, MapPin, Bed, Bath, ShieldCheck, Video } from 'lucide-react';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useFavorites } from '@/context/FavoritesContext';
 import { SeedProperty } from '@/db/seed-data';
@@ -53,13 +53,21 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <Heart className={`w-4 h-4 ${saved ? 'fill-current' : ''}`} />
         </button>
 
-        {/* Verified Badge */}
-        {property.isVerified && (
-          <div className="absolute left-3 top-3 z-20 flex items-center gap-1 rounded-full bg-black/60 backdrop-blur-sm px-2.5 py-1 text-[0.6875rem] font-bold text-white">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Verified</span>
-          </div>
-        )}
+        {/* Verified & Video Badges */}
+        <div className="absolute left-3 top-3 z-20 flex flex-wrap items-center gap-1.5">
+          {property.isVerified && (
+            <div className="flex items-center gap-1 rounded-full bg-black/60 backdrop-blur-sm px-2.5 py-1 text-[0.6875rem] font-bold text-white">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Verified</span>
+            </div>
+          )}
+          {(property.videoUrl || (property.videos && property.videos.length > 0)) && (
+            <div className="flex items-center gap-1 rounded-full bg-amber-500 text-slate-950 px-2 py-0.5 text-[0.65rem] font-black uppercase shadow">
+              <Video className="w-3 h-3" />
+              <span>Video</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Details Box */}

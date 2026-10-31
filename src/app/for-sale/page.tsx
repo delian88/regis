@@ -5,7 +5,7 @@ import { CatalogPageContent } from '@/components/CatalogPageContent';
 import { getProperties } from '@/db';
 
 export const metadata = {
-  title: 'Property for Sale in Nigeria - Houses, Flats & Land | Nigeria Property Centre',
+  title: 'Properties for Sale — Regis Integrated Services Limited | Luxury Homes & Serviced Land',
   description: 'Find verified properties for sale in Nigeria. Browse duplexes, flats, bungalows, and dry land with C of O and Governor Consent across Lagos, Abuja, and nationwide.',
 };
 

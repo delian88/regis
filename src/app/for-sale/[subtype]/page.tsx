@@ -36,10 +36,10 @@ export async function generateMetadata({ params }: SubtypePageProps) {
   const { subtype } = await params;
   const config = SUBTYPE_MAP[subtype] || {
     title: 'Properties for Sale in Nigeria',
-    desc: 'Find verified properties for sale across Nigeria with Nigeria Property Centre.',
+    desc: 'Find verified properties for sale across Nigeria with Regis Integrated Services Limited.',
   };
   return {
-    title: `${config.title} | Nigeria Property Centre`,
+    title: `${config.title} | Regis Integrated Services Limited`,
     description: config.desc,
   };
 }
@@ -50,7 +50,7 @@ export default async function ForSaleSubtypePage({ params, searchParams }: Subty
   const config = SUBTYPE_MAP[subtype] || {
     type: 'all',
     title: 'Properties for Sale in Nigeria',
-    desc: 'Find verified properties for sale across Nigeria with Nigeria Property Centre.',
+    desc: 'Find verified properties for sale across Nigeria with Regis Integrated Services Limited.',
   };
 
   const properties = await getProperties({

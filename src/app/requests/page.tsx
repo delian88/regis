@@ -5,7 +5,7 @@ import { PropertyRequestsClient } from './PropertyRequestsClient';
 import { getPropertyRequests } from '@/db';
 
 export const metadata = {
-  title: 'Property Requests in Nigeria - Houses, Flats & Land Needed | Nigeria Property Centre',
+  title: 'Client Property Requests & Acquisition Enquiries — Regis Integrated Services Limited',
   description: 'Browse genuine real estate buyer and tenant requests across Lagos, Abuja, Port Harcourt and throughout Nigeria. Contact prospective clients with matching listings directly.',
 };
 

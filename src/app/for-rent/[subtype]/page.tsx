@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: RentSubtypePageProps) {
   const { subtype } = await params;
   const config = RENT_SUBTYPE_MAP[subtype] || {
     title: 'Properties for Rent in Nigeria',
-    desc: 'Find verified properties for rent across Nigeria with Nigeria Property Centre.',
+    desc: 'Find verified properties for rent across Nigeria with Regis Integrated Services Limited.',
   };
   return {
-    title: `${config.title} | Nigeria Property Centre`,
+    title: `${config.title} | Regis Integrated Services Limited`,
     description: config.desc,
   };
 }
@@ -55,7 +55,7 @@ export default async function ForRentSubtypePage({ params, searchParams }: RentS
     type: 'all',
     category: 'rent' as const,
     title: 'Properties for Rent in Nigeria',
-    desc: 'Find verified properties for rent across Nigeria with Nigeria Property Centre.',
+    desc: 'Find verified properties for rent across Nigeria with Regis Integrated Services Limited.',
   };
 
   const properties = await getProperties({

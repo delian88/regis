@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "fullName": "Alhaji Musa Danladi",
+    "email": "musa.danladi@gmail.com",
+    "phone": "+234 803 445 9988",
+    "propertyInterest": "Guzape 6-Bedroom Luxury Terrace Duplex with Basement",
+    "preferredDate": "2026-11-05",
+    "message": "I want to schedule an executive private walkout basement and penthouse inspection with my family.",
+    "status": "pending",
+    "createdAt": "2026-10-30T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "fullName": "Dr. Chidinma Okafor",
+    "email": "chidinma.okafor@yahoo.com",
+    "phone": "+234 812 667 4321",
+    "propertyInterest": "5-Bedroom Semi-Detached Duplex – FHA Mbora",
+    "preferredDate": "2026-11-08",
+    "message": "Interested in FHA Mortgage Bank financing terms and payment milestone schedule.",
+    "status": "contacted",
+    "createdAt": "2026-10-29T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "fullName": "Engr. Kenneth Adeleke",
+    "email": "kadeleke@consultants.ng",
+    "phone": "+234 805 112 3344",
+    "propertyInterest": "Lugbe Serviced Estate Land (500 SQM)",
+    "preferredDate": "2026-11-10",
+    "message": "Would like to verify beacon coordinates and approved architectural building drawings.",
+    "status": "scheduled",
+    "createdAt": "2026-10-28T16:45:00Z"
+  }
+]

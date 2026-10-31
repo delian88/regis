@@ -42,7 +42,7 @@ export default function RegisterPage() {
         });
         if (error) throw error;
       }
-      alert('Registration successful! Welcome to Nigeria Property Centre.');
+      alert('Registration successful! Welcome to Regis Integrated Services Limited.');
       router.push('/');
     } catch (err: unknown) {
       if (err instanceof Error) {

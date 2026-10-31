@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Real Estate Safety & Anti-Fraud Advice | Nigeria Property Centre',
+  title: 'Real Estate Safety & Anti-Fraud Advice — Regis Integrated Services Limited',
   description: 'Crucial safety guidelines for renting and buying property in Nigeria. Learn how to verify land titles, avoid upfront payment scams, and inspect properties safely.',
 };
 
@@ -49,7 +49,7 @@ export default function SafetyTipsPage() {
     {
       icon: ShieldCheck,
       title: 'Transact with Accredited Agents & Developers',
-      description: 'Look for the "Verified" badge on Nigeria Property Centre. Prioritize firms registered with the Corporate Affairs Commission (CAC) and licensed with bodies like NIESV (Nigerian Institution of Estate Surveyors and Valuers) or REDAN.',
+      description: 'Look for verified and accredited developers and certified estate surveyors. Prioritize firms registered with the Corporate Affairs Commission (CAC) and licensed with bodies like NIESV (Nigerian Institution of Estate Surveyors and Valuers) or REDAN.',
       action: 'Check an agent\'s listing track record and customer reviews on our platform.',
     },
   ];
@@ -82,7 +82,7 @@ export default function SafetyTipsPage() {
                 CRITICAL WARNING: Zero Upfront Payment Policy
               </h2>
               <p className="text-xs sm:text-sm text-red-800 dark:text-red-300 leading-relaxed mt-1">
-                Nigeria Property Centre does not collect money on behalf of landlords or agents. Any individual asking you to send &ldquo;caution deposits&rdquo;, &ldquo;commitment fee&rdquo;, or &ldquo;inspection fees&rdquo; via mobile transfer before meeting physically is a fraudster. Report such listings immediately.
+                Regis Integrated Services Limited maintains strict transparent client documentation and bank transactions. Any unauthorized individual asking you to send personal "caution deposits", "commitment fees", or "inspection fees" via personal mobile transfer before meeting physically is a fraudster. Report such communications immediately.
               </p>
             </div>
           </div>

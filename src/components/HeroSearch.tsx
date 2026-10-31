@@ -18,18 +18,18 @@ import {
 import { useCurrency } from '@/context/CurrencyContext';
 
 const NIGERIAN_LOCATIONS = [
-  { name: 'Lekki, Lagos', state: 'Lagos', locality: 'Lekki' },
-  { name: 'Ikoyi, Lagos', state: 'Lagos', locality: 'Ikoyi' },
-  { name: 'Victoria Island (VI), Lagos', state: 'Lagos', locality: 'Victoria Island' },
-  { name: 'Ajah, Lagos', state: 'Lagos', locality: 'Ajah' },
-  { name: 'Ikeja, Lagos', state: 'Lagos', locality: 'Ikeja' },
-  { name: 'Maitama, Abuja', state: 'Abuja', locality: 'Maitama' },
+  { name: 'Mbora (FHA Golden Jubilee), Abuja', state: 'Abuja', locality: 'Mbora' },
   { name: 'Guzape District, Abuja', state: 'Abuja', locality: 'Guzape' },
+  { name: 'Lugbe (Airport Road), Abuja', state: 'Abuja', locality: 'Lugbe' },
+  { name: 'Idu Industrial Layout, Abuja', state: 'Abuja', locality: 'Idu' },
+  { name: 'Wuse Zone 2 (Head Office), Abuja', state: 'Abuja', locality: 'Wuse' },
+  { name: 'Maitama, Abuja', state: 'Abuja', locality: 'Maitama' },
   { name: 'Life Camp, Abuja', state: 'Abuja', locality: 'Life Camp' },
   { name: 'Gwarinpa, Abuja', state: 'Abuja', locality: 'Gwarinpa' },
-  { name: 'Port Harcourt, Rivers', state: 'Rivers', locality: 'Port Harcourt' },
+  { name: 'Lekki Phase 1, Lagos', state: 'Lagos', locality: 'Lekki' },
+  { name: 'Ikoyi, Lagos', state: 'Lagos', locality: 'Ikoyi' },
+  { name: 'Victoria Island, Lagos', state: 'Lagos', locality: 'Victoria Island' },
   { name: 'Ibadan, Oyo', state: 'Oyo', locality: 'Ibadan' },
-  { name: 'Mowe Ofada, Ogun', state: 'Ogun', locality: 'Mowe Ofada' },
 ];
 
 const PROPERTY_TYPES = [
@@ -87,10 +87,18 @@ const AMENITIES_LIST = [
   'POP ceiling',
   'Smart home',
   'Cinema room',
-  'Jacuzzi / bathtub',
 ];
 
-export function HeroSearch() {
+export interface HeroSearchProps {
+  content?: {
+    badge?: string;
+    title?: string;
+    subtitle?: string;
+    backgroundImage?: string;
+  };
+}
+
+export function HeroSearch({ content }: HeroSearchProps = {}) {
   const router = useRouter();
   const { formatPrice } = useCurrency();
 
@@ -194,17 +202,18 @@ export function HeroSearch() {
 
       <div className="relative mx-auto flex max-w-content flex-col items-center gap-6 px-4 text-center sm:px-6 lg:gap-7">
         {/* Marketplace Trust Badge */}
-        <span className="inline-flex items-center gap-2 rounded-pill border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-sm">
-          <ShieldCheck className="w-4 h-4 text-red-400" />
-          Nigeria&apos;s leading property marketplace
+        <span className="inline-flex items-center gap-2 rounded-pill border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-bold text-amber-300 backdrop-blur-sm">
+          <ShieldCheck className="w-4 h-4 text-amber-400" />
+          {content?.badge || 'AFFORDABLE LUXURIOUS HOMES — DESIGNED TO GIVE YOU LUXURY, YET AFFORDABLE'}
         </span>
 
         {/* Main Headline */}
-        <h1 className="max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
-          Find the right property
+        <h1 className="max-w-4xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight uppercase">
+          {content?.title || 'PROVIDING AFFORDABLE HOUSING FOR DESERVING NIGERIANS'}
         </h1>
-        <p className="max-w-xl text-sm text-slate-300 sm:text-base">
-          Search thousands of homes, land and commercial property for sale and rent — across every major city in Nigeria.
+        <p className="max-w-2xl text-sm text-slate-300 sm:text-base leading-relaxed">
+          {content?.subtitle ||
+            'Welcome to Regis Integrated Services Limited. Explore premier luxury residences in Guzape, FHA Golden Jubilee Estate Mbora, and serviced estate lands across Abuja and Nigeria.'}
         </p>
 
         {/* The Signature Search Panel Card */}

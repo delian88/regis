@@ -178,7 +178,7 @@ export function PropertyRequestsClient({ initialRequests }: PropertyRequestsClie
               year: 'numeric',
             });
 
-            const whatsappMsg = `Hello ${req.name}, I am a verified agent on Nigeria Property Centre. I saw your request for ${req.propertyType} in ${req.locality || req.state} (Budget: ${formatPrice(req.budgetMin)} - ${formatPrice(req.budgetMax)}). I have matching options available for inspection.`;
+            const whatsappMsg = `Hello ${req.name}, I am a representative from Regis Integrated Services Limited. I saw your request for ${req.propertyType} in ${req.locality || req.state} (Budget: ${formatPrice(req.budgetMin)} - ${formatPrice(req.budgetMax)}). We have matching options and serviced plots available for inspection.`;
 
             return (
               <div

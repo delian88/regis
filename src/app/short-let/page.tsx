@@ -5,7 +5,7 @@ import { CatalogPageContent } from '@/components/CatalogPageContent';
 import { getProperties } from '@/db';
 
 export const metadata = {
-  title: 'Short Let Apartments in Nigeria - Holiday & Vacation Homes | Nigeria Property Centre',
+  title: 'Short Let Apartments & Luxury Villas — Regis Integrated Services Limited',
   description: 'Book fully furnished, serviced short let flats and luxury villas in Lekki Phase 1, Ikoyi, Victoria Island, and Maitama Abuja with 24/7 power, WiFi, and swimming pools.',
 };
 

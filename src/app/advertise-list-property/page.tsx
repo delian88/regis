@@ -81,7 +81,7 @@ export default function AdvertiseListPropertyPage() {
               <span>POST A PROPERTY FREE</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[var(--foreground-strong)] tracking-tight">
-              List Your Property on Nigeria Property Centre
+              List Your Property on Regis Real Estate Portal
             </h1>
             <p className="mt-2 text-xs sm:text-sm text-[var(--foreground-muted)]">
               Reach over 2 million monthly property buyers, tenants, and investors across Nigeria and in the diaspora.

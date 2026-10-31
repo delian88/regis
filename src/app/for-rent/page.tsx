@@ -5,7 +5,7 @@ import { CatalogPageContent } from '@/components/CatalogPageContent';
 import { getProperties } from '@/db';
 
 export const metadata = {
-  title: 'Property for Rent in Nigeria - Flats, Houses & Offices | Nigeria Property Centre',
+  title: 'Property for Rent — Regis Integrated Services Limited | Residential & Commercial Rentals',
   description: 'Search houses, flats, serviced apartments, and office spaces for rent in Lagos, Abuja, Ibadan, Port Harcourt and across Nigeria from certified agents.',
 };
 
