@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Lock, Mail, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { RegisLogo } from '@/components/RegisLogo';
 import { supabase } from '@/lib/supabase/client';
 
 export default function LoginPage() {
@@ -66,15 +67,15 @@ export default function LoginPage() {
 
       <main className="flex-1 flex items-center justify-center py-16 px-4 sm:px-6">
         <div className="w-full max-w-md space-y-6">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center size-14 rounded-2xl bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 text-slate-950 font-black text-2xl shadow-xl shadow-amber-500/20 mb-4">
-              R
+          <div className="text-center flex flex-col items-center">
+            <div className="mb-4">
+              <RegisLogo size="md" showSubtitle={true} href="/" />
             </div>
-            <h1 className="text-2xl font-black text-[var(--foreground-strong)] tracking-tight">
-              Sign in to Regis RISL
+            <h1 className="text-xl sm:text-2xl font-black text-[var(--foreground-strong)] tracking-tight">
+              Client Portal Sign In
             </h1>
-            <p className="mt-1 text-xs text-[var(--foreground-muted)]">
-              Access your real estate portfolio, saved listings, and inspection requests
+            <p className="mt-1 text-xs text-[var(--foreground-muted)] max-w-sm">
+              Access your real estate documentation, milestone inspections, and property agreements
             </p>
           </div>
 

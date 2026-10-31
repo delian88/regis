@@ -72,7 +72,7 @@ export function CatalogPageContent({
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[var(--foreground-muted)]" />
             <input
               type="text"
-              placeholder="Search Lekki, Ikoyi, Abuja..."
+              placeholder="Search Guzape, Mbora, Lugbe, Idu, Abuja..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--foreground)] focus:ring-2 focus:ring-red-500 focus:outline-none"

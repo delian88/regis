@@ -53,18 +53,21 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <Heart className={`w-4 h-4 ${saved ? 'fill-current' : ''}`} />
         </button>
 
-        {/* Verified & Video Badges */}
+        {/* Regis Brand & Video Badges */}
         <div className="absolute left-3 top-3 z-20 flex flex-wrap items-center gap-1.5">
+          <div className="flex items-center gap-1 rounded-full bg-amber-500 text-slate-950 px-2.5 py-0.5 text-[0.625rem] font-black uppercase tracking-wider shadow-md">
+            <span>Regis Development</span>
+          </div>
           {property.isVerified && (
-            <div className="flex items-center gap-1 rounded-full bg-black/60 backdrop-blur-sm px-2.5 py-1 text-[0.6875rem] font-bold text-white">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Verified</span>
+            <div className="flex items-center gap-1 rounded-full bg-black/60 backdrop-blur-sm px-2 py-0.5 text-[0.625rem] font-bold text-white">
+              <ShieldCheck className="w-3 h-3 text-emerald-400" />
+              <span>Verified Title</span>
             </div>
           )}
           {(property.videoUrl || (property.videos && property.videos.length > 0)) && (
-            <div className="flex items-center gap-1 rounded-full bg-amber-500 text-slate-950 px-2 py-0.5 text-[0.65rem] font-black uppercase shadow">
+            <div className="flex items-center gap-1 rounded-full bg-slate-950/80 text-amber-400 border border-amber-500/30 px-2 py-0.5 text-[0.625rem] font-bold uppercase shadow">
               <Video className="w-3 h-3" />
-              <span>Video</span>
+              <span>Video Tour</span>
             </div>
           )}
         </div>

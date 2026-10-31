@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, Clock, ShieldCheck, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { RegisLogo } from './RegisLogo';
 
 export function Footer() {
   return (
@@ -61,16 +62,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand Info & Contact */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="relative h-10 w-44">
-                <Image
-                  src="https://www.regis.com.ng/wp-content/uploads/2016/07/logoconstruction.png"
-                  alt="Regis Integrated Services Limited"
-                  fill
-                  className="object-contain object-left"
-                />
-              </div>
-            </Link>
+            <div className="pb-2">
+              <RegisLogo variant="light" size="md" showSubtitle={true} href="/" />
+            </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               <strong className="text-white font-semibold">Regis Integrated Services Limited (RISL)</strong> is a premier Nigerian real estate development, design, and construction enterprise. For over a decade, we have delivered 1,000+ affordable luxurious housing units and serviced plots across Abuja and Nigeria.

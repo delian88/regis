@@ -16,6 +16,7 @@ import {
   Eye,
   EyeOff,
 } from 'lucide-react';
+import { RegisLogo } from '@/components/RegisLogo';
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -75,20 +76,12 @@ export default function AdminLoginPage() {
 
       {/* Top Header */}
       <header className="relative z-10 p-6 flex items-center justify-between max-w-7xl w-full mx-auto">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-amber-500/25 group-hover:scale-105 transition-transform">
-            R
-          </div>
-          <div>
-            <div className="font-black text-sm tracking-tight text-white flex items-center gap-2">
-              <span>REGIS RISL</span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold uppercase tracking-wider border border-amber-500/30">
-                Superadmin
-              </span>
-            </div>
-            <p className="text-[11px] text-slate-400">Integrated Services Limited</p>
-          </div>
-        </Link>
+        <div className="flex items-center gap-3">
+          <RegisLogo variant="light" size="sm" showSubtitle={true} href="/" />
+          <span className="hidden sm:inline-block text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 font-bold uppercase tracking-wider border border-amber-500/30">
+            Superadmin
+          </span>
+        </div>
 
         <Link
           href="/"

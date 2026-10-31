@@ -377,32 +377,30 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
         {/* Right Column: Contact Agent, Inquiry Form, Safety Warning */}
         <div className="lg:col-span-4 space-y-6">
           {/* Agent Card */}
+          {/* Right Sidebar: Direct Regis Developer & Inquiry Form */}
           <div className="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] shadow-sm sticky top-24">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--foreground-muted)] mb-4">
-              Listed by Verified Agent
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20 mb-3">
+              <Building className="w-3 h-3" />
+              <span>DIRECT DEVELOPER LISTING</span>
+            </div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--foreground-muted)] mb-3">
+              Regis Integrated Services Limited
             </h3>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="relative size-14 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800 border shrink-0">
-                <Image
-                  src={property.agent?.logoUrl || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80'}
-                  alt={property.agent?.name || 'Agent'}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative size-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-700 flex items-center justify-center text-slate-950 font-black text-base shadow shrink-0">
+                R
               </div>
               <div className="min-w-0 flex-1">
-                <h4 className="font-bold text-sm text-[var(--foreground-strong)] truncate">
-                  {property.agent?.name || 'Accredited Property Consultant'}
+                <h4 className="font-extrabold text-sm text-[var(--foreground-strong)] truncate">
+                  Regis Corporate Directorate
                 </h4>
-                {property.agent?.companyName && (
-                  <p className="text-xs text-[var(--foreground-muted)] truncate">
-                    {property.agent.companyName}
-                  </p>
-                )}
-                <div className="flex items-center gap-1 text-[0.6875rem] font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+                <p className="text-xs text-[var(--foreground-muted)] truncate">
+                  22 Koforidua Street, Wuse Zone 2, Abuja
+                </p>
+                <div className="flex items-center gap-1 text-[0.6875rem] font-bold text-amber-600 dark:text-amber-400 mt-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>Verified Partner</span>
+                  <span>Developer & Builder</span>
                 </div>
               </div>
             </div>
@@ -410,18 +408,18 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
             {/* Quick Contact Buttons */}
             <div className="grid grid-cols-2 gap-2 mb-6">
               <a
-                href={`tel:${property.agent?.phone || '+2348031234567'}`}
-                className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl text-xs font-bold bg-red-600 hover:bg-red-700 text-white transition-colors"
+                href="tel:+2348155555168"
+                className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition-colors shadow-sm"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call Agent</span>
+                <span>Call Regis</span>
               </a>
 
               <a
-                href={`https://wa.me/${property.agent?.whatsapp?.replace(/[^0-9]/g, '') || '2348031234567'}?text=Hello%20${encodeURIComponent(property.agent?.name || '')},%20I%20am%20interested%20in%20"${encodeURIComponent(property.title)}"%20on%20Nigeria%20Property%20Centre.`}
+                href={`https://wa.me/2348155555168?text=Hello%20Regis%20Integrated%20Services,%20I%20am%20interested%20in%20"${encodeURIComponent(property.title)}"%20on%20your%20official%20portal.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-600 text-white transition-colors"
+                className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors shadow-sm"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>WhatsApp</span>
@@ -431,7 +429,7 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
             {/* Inquiry Form */}
             <div className="pt-4 border-t border-[var(--border)]">
               <h4 className="text-xs font-bold text-[var(--foreground-strong)] mb-3">
-                Send an Enquiry
+                Schedule Inspection / Enquiry
               </h4>
 
               {inquirySent ? (
@@ -441,7 +439,7 @@ export function PropertyDetailsClient({ property, relatedProperties }: PropertyD
                     Enquiry Sent Successfully!
                   </p>
                   <p className="text-[0.6875rem] text-emerald-600 dark:text-emerald-400 mt-0.5">
-                    The agent has received your details and will call or message you shortly.
+                    Our project director has received your details and will call or message you shortly.
                   </p>
                 </div>
               ) : (

@@ -101,9 +101,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             R
           </div>
           <div>
-            <div className="font-extrabold text-sm tracking-tight text-white flex items-center gap-1.5">
-              <span>REGIS</span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold uppercase tracking-wider border border-amber-500/30">
+            <div className="font-extrabold text-xs tracking-tight text-white flex items-center gap-1.5">
+              <span>REGIS INTEGRATED SERVICES</span>
+              <span className="text-[9px] px-1 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold uppercase tracking-wider border border-amber-500/30">
                 Admin
               </span>
             </div>
@@ -127,15 +127,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         {/* Brand Banner */}
         <div className="p-5 border-b border-white/10">
           <Link href="/admin" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-amber-500/25 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-amber-500/25 group-hover:scale-105 transition-transform shrink-0">
               R
             </div>
-            <div>
-              <div className="font-black text-base tracking-tight text-white flex items-center gap-1.5">
-                <span>REGIS RISL</span>
+            <div className="min-w-0">
+              <div className="font-black text-xs sm:text-sm tracking-tight text-white uppercase leading-tight">
+                <span className="text-amber-500">Regis </span>
+                <span>Integrated Services Ltd</span>
               </div>
-              <p className="text-[11px] text-amber-400 font-semibold tracking-wider uppercase">
-                Enterprise Admin CMS
+              <p className="text-[10px] text-amber-400/90 font-bold tracking-wider uppercase mt-0.5">
+                Enterprise Management Portal
               </p>
             </div>
           </Link>
