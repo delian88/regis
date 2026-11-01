@@ -19,7 +19,13 @@ async function check() {
   // Check if Admin Login links exist in HTML
   const loginSnippets = [...html.matchAll(/<a[^>]*href="\/admin\/login"[^>]*>([\s\S]*?)<\/a>/gi)].map(m => m[0].replace(/\s+/g, ' '));
   console.log('Login links count:', loginSnippets.length);
-  loginSnippets.forEach((snippet, i) => console.log(`Snippet ${i + 1}:`, snippet));
+  
+  // Check admin login page
+  const adminLoginRes = await fetch('https://regis-ruby.vercel.app/admin/login', { cache: 'no-store' });
+  const adminHtml = await adminLoginRes.text();
+  console.log('Live admin/login has "Supabase Auth Protected":', adminHtml.includes('Supabase Auth Protected'));
+  console.log('Live admin/login has "Supabase PostgreSQL":', adminHtml.includes('Supabase PostgreSQL'));
+  console.log('Live admin/login has "Live DB":', adminHtml.includes('Live DB'));
 }
 
 check().catch(console.error);
