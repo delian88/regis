@@ -272,7 +272,7 @@ export function Footer() {
               <li>
                 <Link href="/admin/login" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-500 font-semibold">
                   <Lock className="w-3.5 h-3.5" />
-                  <span>Admin Staff Login</span>
+                  <span>Login</span>
                 </Link>
               </li>
             </ul>
@@ -294,7 +294,7 @@ export function Footer() {
             </Link>
             <Link href="/admin/login" className="hover:text-amber-400 transition-colors flex items-center gap-1 font-semibold text-amber-500/90">
               <Lock className="w-3 h-3" />
-              <span>Admin Login</span>
+              <span>Login</span>
             </Link>
           </div>
         </div>

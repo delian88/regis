@@ -102,10 +102,10 @@ export function Header() {
             <Link
               href="/admin/login"
               className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-amber-400 hover:text-white bg-amber-500/15 hover:bg-amber-500/30 border border-amber-500/35 transition-all font-bold tracking-wide"
-              title="Superadmin Login Portal"
+              title="Login Portal"
             >
               <Lock className="w-3 h-3 text-amber-400" />
-              <span>ADMIN LOGIN</span>
+              <span>LOGIN</span>
             </Link>
           </div>
         </div>
@@ -409,14 +409,14 @@ export function Header() {
             )}
           </div>
 
-          {/* Admin Login Button */}
+          {/* Login Button */}
           <Link
             href="/admin/login"
             className="inline-flex items-center gap-1.5 font-bold rounded-full text-xs px-3.5 h-9 bg-slate-900/90 hover:bg-slate-800 text-amber-400 hover:text-amber-300 border border-amber-500/40 hover:border-amber-400 shadow-sm transition-all"
-            title="Login to Regis Admin Account"
+            title="Login to Account"
           >
             <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span>Admin Login</span>
+            <span>Login</span>
           </Link>
 
           {/* Primary CTA: Book Site Inspection */}
@@ -460,7 +460,7 @@ export function Header() {
               </button>
             </div>
 
-            {/* Admin Login Quick Access Card */}
+            {/* Login Quick Access Card */}
             <div className="pt-3 pb-1">
               <Link
                 href="/admin/login"
@@ -472,8 +472,8 @@ export function Header() {
                     <Lock className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-white text-xs font-bold">Admin Account Login</div>
-                    <div className="text-[11px] text-amber-400/90 font-medium">Manage properties, CMS & leads</div>
+                    <div className="text-white text-xs font-bold">Account Login</div>
+                    <div className="text-[11px] text-amber-400/90 font-medium">Sign in to manage portal</div>
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 transition-transform" />
@@ -561,7 +561,7 @@ export function Header() {
               >
                 <span className="flex items-center gap-2">
                   <Lock className="w-4 h-4 text-amber-400" />
-                  <span>Admin Portal Login</span>
+                  <span>Login</span>
                 </span>
                 <ArrowRight className="w-4 h-4 text-amber-400" />
               </Link>
