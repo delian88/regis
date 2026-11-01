@@ -7,11 +7,11 @@ export async function GET(request: NextRequest) {
     const section = searchParams.get('section') as keyof SiteContentMap | null;
 
     if (section) {
-      const data = getSiteContent(section);
+      const data = await getSiteContent(section);
       return NextResponse.json({ success: true, section, data });
     }
 
-    const all = getAllSiteContent();
+    const all = await getAllSiteContent();
     return NextResponse.json({ success: true, data: all });
   } catch (error) {
     console.error('Error in GET /api/admin/content:', error);
@@ -31,7 +31,7 @@ export async function PUT(request: NextRequest) {
       );
     }
 
-    const updated = updateSiteContent(section as keyof SiteContentMap, data);
+    const updated = await updateSiteContent(section as keyof SiteContentMap, data);
 
     return NextResponse.json({
       success: true,
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     if (body.action === 'reset') {
-      const reset = resetSiteContent();
+      const reset = await resetSiteContent();
       return NextResponse.json({
         success: true,
         message: 'Site content reset to official Regis defaults',

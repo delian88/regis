@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const created = addInspectionBooking({
+    const created = await addInspectionBooking({
       fullName: body.fullName,
       email: body.email || '',
       phone: body.phone,

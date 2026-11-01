@@ -13,6 +13,7 @@ import {
   RefreshCw,
   Building2,
   Calendar,
+  Trash2,
 } from 'lucide-react';
 import { InspectionBooking } from '@/db';
 
@@ -22,6 +23,7 @@ export default function AdminInquiriesPage() {
   const [filterStatus, setFilterStatus] = useState('all');
   const [search, setSearch] = useState('');
   const [updatingId, setUpdatingId] = useState<number | null>(null);
+  const [deletingId, setDeletingId] = useState<number | null>(null);
 
   const fetchInquiries = async () => {
     setLoading(true);
@@ -41,6 +43,29 @@ export default function AdminInquiriesPage() {
   useEffect(() => {
     fetchInquiries();
   }, []);
+
+  const handleDeleteInquiry = async (id: number) => {
+    if (!confirm('Are you sure you want to permanently delete this client inquiry from PostgreSQL?')) {
+      return;
+    }
+    setDeletingId(id);
+    try {
+      const res = await fetch(`/api/admin/inquiries?id=${id}`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.success) {
+        setInquiries((prev) => prev.filter((item) => item.id !== id));
+      } else {
+        alert(data.error || 'Failed to delete inquiry');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error deleting inquiry.');
+    } finally {
+      setDeletingId(null);
+    }
+  };
 
   const handleUpdateStatus = async (id: number, newStatus: InspectionBooking['status']) => {
     setUpdatingId(id);
@@ -206,6 +231,14 @@ export default function AdminInquiriesPage() {
                       <Mail className="w-4 h-4" />
                     </a>
                   )}
+                  <button
+                    onClick={() => handleDeleteInquiry(item.id)}
+                    disabled={deletingId === item.id}
+                    className="p-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-colors disabled:opacity-50"
+                    title="Delete Inquiry from Database"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
 

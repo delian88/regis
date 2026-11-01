@@ -32,8 +32,8 @@ export const metadata = {
 const SERVICE_ICONS = [Compass, Palette, HardHat, Layers, Building, FileSpreadsheet];
 
 export default async function AboutUsPage() {
-  const content = getSiteContent('about_page');
-  const ctaContent = getSiteContent('homepage_cta');
+  const content = await getSiteContent('about_page');
+  const ctaContent = await getSiteContent('homepage_cta');
 
   const services = content?.services || [
     {
