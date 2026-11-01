@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, ArrowUpRight, ShieldCheck, Sparkles, Building2 } from 'lucide-react';
+import { MapPin, ArrowUpRight, ShieldCheck, Building2 } from 'lucide-react';
 
 interface DistrictInfo {
   name: string;
@@ -107,8 +107,7 @@ export function RegisDistricts() {
 
                 {/* Status Badge */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-amber-500 text-slate-950 shadow-md">
-                    <Sparkles className="w-3 h-3" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold bg-amber-500 text-slate-950 shadow-md">
                     <span>{item.statusBadge}</span>
                   </span>
                 </div>

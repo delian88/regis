@@ -9,7 +9,6 @@ import {
   Video,
   Image as ImageIcon,
   ArrowUpRight,
-  Sparkles,
   MapPin,
   TrendingUp,
   ShieldCheck,
@@ -42,7 +41,7 @@ export default async function AdminDashboardPage() {
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-              <Sparkles className="w-3.5 h-3.5" />
+              <ShieldCheck className="w-3.5 h-3.5" />
               <span>Regis Integrated Services Management Portal</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">

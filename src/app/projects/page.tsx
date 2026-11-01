@@ -14,7 +14,6 @@ import {
   ShieldCheck,
   Calendar,
   Layers,
-  Sparkles,
 } from 'lucide-react';
 
 export const metadata = {

@@ -13,7 +13,6 @@ import {
   Check,
   ShieldCheck,
   X,
-  Sparkles
 } from 'lucide-react';
 import { useCurrency } from '@/context/CurrencyContext';
 
@@ -661,7 +660,7 @@ export function HeroSearch({ content }: HeroSearchProps = {}) {
                     <span className="truncate">
                       {selectedAmenities.length > 0 ? `${selectedAmenities.length} selected` : 'Select amenities'}
                     </span>
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <SlidersHorizontal className="w-3.5 h-3.5 text-amber-400" />
                   </button>
                 </div>
 

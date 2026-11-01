@@ -15,7 +15,6 @@ import {
   Home,
   CheckCircle2,
   Clock,
-  Sparkles
 } from 'lucide-react';
 import { SeedPropertyRequest } from '@/db/seed-data';
 
@@ -78,7 +77,7 @@ export function PropertyRequestsClient({ initialRequests }: PropertyRequestsClie
       <div className="rounded-3xl bg-gradient-to-r from-slate-950 via-[#070B16] to-slate-900 text-white p-6 sm:p-8 mb-8 shadow-xl border border-white/10 relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="relative z-10 max-w-2xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.6875rem] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-3 backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Building2 className="w-3.5 h-3.5" />
             <span>REGIS CLIENT ACQUISITION DESK</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white">

@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Building2, Compass, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Building2, Compass, ShieldCheck } from 'lucide-react';
 import { SiteContentMap } from '@/db/site-content';
 
 interface RegisPillarsProps {

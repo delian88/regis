@@ -8,7 +8,6 @@ import {
   Lock,
   Mail,
   ArrowRight,
-  Sparkles,
   Building2,
   Database,
   CheckCircle2,
@@ -114,7 +113,7 @@ export default function AdminLoginPage() {
             <div className="p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-600/5 to-transparent border border-amber-500/25 flex items-center justify-between text-xs">
               <div className="space-y-0.5">
                 <div className="flex items-center gap-1.5 text-amber-400 font-bold text-[11px] uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <ShieldCheck className="w-3.5 h-3.5" />
                   <span>Configured Credentials</span>
                 </div>
                 <div className="text-slate-300 font-mono text-[11px]">

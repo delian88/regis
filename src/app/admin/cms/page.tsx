@@ -6,7 +6,6 @@ import {
   FileEdit,
   Save,
   CheckCircle2,
-  Sparkles,
   Layers,
   Building,
   Image as ImageIcon,
@@ -119,7 +118,7 @@ export default function AdminCMSPage() {
   };
 
   const tabs = [
-    { key: 'hero', label: '1. Landing Hero', icon: Sparkles },
+    { key: 'hero', label: '1. Landing Hero', icon: Building },
     { key: 'pillars', label: '2. Core Pillars', icon: Layers },
     { key: 'story', label: '3. Corporate Story', icon: BookOpen },
     { key: 'gallery', label: '4. Regis Gallery', icon: ImageIcon },
@@ -213,7 +212,7 @@ export default function AdminCMSPage() {
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <div>
               <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-amber-400" />
+                <Building className="w-5 h-5 text-amber-400" />
                 <span>Landing Page Hero Section</span>
               </h2>
               <p className="text-xs text-slate-400 mt-0.5">

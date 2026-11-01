@@ -11,39 +11,68 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja",
+  metadataBase: new URL("https://regis-ruby.vercel.app"),
+  title: {
+    default: "Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja",
+    template: "%s | Regis Integrated Services Limited",
+  },
   description:
-    "Official website of Regis Integrated Services Limited (RISL). For over a decade, delivering 1,000+ affordable luxurious housing units, duplexes, and serviced plots across Abuja, including Regis Royale Estate, FHA Golden Jubilee Estate Mbora, Guzape terraces, and Lugbe/Idu land.",
+    "Official portal of Regis Integrated Services Limited (RISL). Leading Nigerian real estate development and turnkey construction company. Explore Regis Royale Estate, Guzape luxury terraces, FHA Mbora duplexes, and serviced land in Lugbe and Idu, Abuja.",
   keywords: [
     "Regis Integrated Services Limited",
-    "Regis Properties",
+    "RISL Nigeria",
+    "Regis Properties Abuja",
     "Regis Royale Estate",
     "FHA Golden Jubilee Estate Mbora",
     "Guzape Luxury Terraces Abuja",
-    "Serviced Land Lugbe Abuja",
+    "Serviced Plots Lugbe Abuja",
     "Idu Industrial Land Abuja",
     "Affordable Housing Nigeria",
+    "Turnkey Construction Abuja",
     "Federal Housing Authority Partner",
     "Real Estate Developers Abuja",
   ],
+  authors: [{ name: "Regis Integrated Services Limited", url: "https://regis-ruby.vercel.app" }],
+  creator: "Regis Integrated Services Limited",
+  publisher: "Regis Integrated Services Limited",
+  manifest: "/manifest.json",
   icons: {
-    icon: "https://www.regis.com.ng/wp-content/uploads/2023/10/REGISlogo.jpg",
-    apple: "https://www.regis.com.ng/wp-content/uploads/2023/10/REGISlogo.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
-    title: "Regis Integrated Services Limited — Providing Affordable Housing for Deserving Nigerians",
-    description: "Discover signature residential estates, luxury terrace duplexes, and prime serviced land in Abuja with flexible mortgage options.",
     type: "website",
-    url: "https://regis.com.ng",
+    locale: "en_NG",
+    url: "https://regis-ruby.vercel.app",
     siteName: "Regis Integrated Services Limited",
+    title: "Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja",
+    description:
+      "Official portal of Regis Integrated Services Limited (RISL). Leading Nigerian real estate development and turnkey construction company. Explore Regis Royale Estate, Guzape luxury terraces, FHA Mbora duplexes, and serviced land in Lugbe and Idu, Abuja.",
     images: [
       {
-        url: "https://www.regis.com.ng/wp-content/uploads/2016/07/logoconstruction.png",
-        width: 800,
-        height: 250,
-        alt: "Regis Integrated Services Limited Logo",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Regis Integrated Services Limited — Real Estate & Construction Abuja",
+        type: "image/jpeg",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja",
+    description:
+      "Official portal of Regis Integrated Services Limited (RISL). Leading Nigerian real estate development and turnkey construction company. Explore Regis Royale Estate, Guzape luxury terraces, FHA Mbora duplexes, and serviced land in Lugbe and Idu, Abuja.",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://regis-ruby.vercel.app",
   },
 };
 

@@ -14,7 +14,6 @@ import {
   Home,
   Layers,
   MapPin,
-  Sparkles,
   CalendarCheck,
   ArrowRight,
   Menu,

@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   ExternalLink,
   Play,
-  Sparkles,
   Layers,
 } from 'lucide-react';
 

@@ -14,7 +14,6 @@ import {
   ArrowRight,
   ShieldCheck,
   ChevronRight,
-  Sparkles,
   Info
 } from 'lucide-react';
 
@@ -321,8 +320,8 @@ export function MarketTrendsClient() {
         {/* Market Insights Card */}
         <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 text-white shadow-lg space-y-4 flex flex-col justify-between">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.6875rem] font-bold bg-white/10 text-red-400 mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.6875rem] font-bold bg-white/10 text-amber-400 mb-3">
+              <TrendingUp className="w-3.5 h-3.5" />
               <span>Q4 2026 MARKET HIGHLIGHTS</span>
             </div>
             <h3 className="text-xl font-bold tracking-tight">

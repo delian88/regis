@@ -16,6 +16,27 @@ export const metadata = {
   title: 'Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja',
   description:
     'Regis Integrated Services Limited (RISL) is Nigeria’s leading property development and construction enterprise. Explore Regis Royale Estate, FHA Golden Jubilee Estate Mbora, Guzape luxury terraces, and serviced lands in Lugbe and Idu, Abuja.',
+  openGraph: {
+    title: 'Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja',
+    description:
+      'Official portal of Regis Integrated Services Limited (RISL). Explore Regis Royale Estate, Guzape luxury terraces, FHA Mbora duplexes, and prime serviced land in Lugbe and Idu, Abuja.',
+    url: 'https://regis-ruby.vercel.app',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Regis Integrated Services Limited — Real Estate & Construction Abuja',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Regis Integrated Services Limited — Affordable Luxury Real Estate & Construction Abuja',
+    description:
+      'Official portal of Regis Integrated Services Limited (RISL). Leading Nigerian real estate development and turnkey construction company.',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default async function HomePage() {

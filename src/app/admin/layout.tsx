@@ -19,7 +19,6 @@ import {
   CheckCircle2,
   Layers,
   Settings,
-  Sparkles,
   LogOut,
 } from 'lucide-react';
 

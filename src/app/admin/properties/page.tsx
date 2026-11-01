@@ -14,7 +14,6 @@ import {
   Trash2,
   MapPin,
   CheckCircle2,
-  Sparkles,
   Layers,
   ArrowUpDown,
   RefreshCw,

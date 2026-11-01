@@ -11,7 +11,6 @@ import {
   Image as ImageIcon,
   CheckCircle2,
   MapPin,
-  Sparkles,
   ArrowLeft,
   Eye,
   HelpCircle,
@@ -481,7 +480,7 @@ export function PropertyForm({ initialData, isEditing = false }: PropertyFormPro
         <div className="p-6 rounded-2xl bg-[#0B1120] border border-white/10 space-y-6">
           <div className="border-b border-white/10 pb-4">
             <h2 className="text-base font-bold text-white flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-amber-400" />
+              <Building2 className="w-5 h-5 text-amber-400" />
               <span>Rooms & Structural Configuration</span>
             </h2>
           </div>
