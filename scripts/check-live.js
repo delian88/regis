@@ -17,8 +17,9 @@ async function check() {
   console.log('Icons found:', icons);
   
   // Check if Admin Login links exist in HTML
-  const adminLoginMatches = (html.match(/href="\/admin\/login"/g) || []).length;
-  console.log('Admin login links count in live HTML:', adminLoginMatches);
+  const loginSnippets = [...html.matchAll(/<a[^>]*href="\/admin\/login"[^>]*>([\s\S]*?)<\/a>/gi)].map(m => m[0].replace(/\s+/g, ' '));
+  console.log('Login links count:', loginSnippets.length);
+  loginSnippets.forEach((snippet, i) => console.log(`Snippet ${i + 1}:`, snippet));
 }
 
 check().catch(console.error);
