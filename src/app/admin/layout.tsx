@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import {
@@ -87,8 +87,49 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     }
   };
 
+  const [checkingAuth, setCheckingAuth] = useState(pathname !== '/admin/login');
+
+  useEffect(() => {
+    if (pathname === '/admin/login') {
+      setCheckingAuth(false);
+      return;
+    }
+
+    let isMounted = true;
+    fetch('/api/admin/auth')
+      .then((res) => {
+        if (!res.ok) {
+          router.push('/admin/login');
+        } else if (isMounted) {
+          setCheckingAuth(false);
+        }
+      })
+      .catch(() => {
+        router.push('/admin/login');
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [pathname, router]);
+
   if (pathname === '/admin/login') {
     return <>{children}</>;
+  }
+
+  if (checkingAuth) {
+    return (
+      <div className="min-h-screen bg-[#070B16] text-slate-100 flex items-center justify-center font-sans">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 font-black text-lg animate-pulse shadow-lg shadow-amber-500/20">
+            R
+          </div>
+          <p className="text-xs text-amber-400 font-semibold tracking-wide">
+            Verifying Regis Admin Authorization...
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (

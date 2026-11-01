@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, ArrowUpRight, MessageCircle, Lock } from 'lucide-react';
 import { RegisLogo } from './RegisLogo';
 
 export function Footer() {
@@ -269,6 +269,12 @@ export function Footer() {
                   Custom Housing Request
                 </Link>
               </li>
+              <li>
+                <Link href="/admin/login" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-500 font-semibold">
+                  <Lock className="w-3.5 h-3.5" />
+                  <span>Admin Staff Login</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -285,6 +291,10 @@ export function Footer() {
             </Link>
             <Link href="/contact-us" className="hover:text-slate-300 transition-colors">
               Abuja Head Office
+            </Link>
+            <Link href="/admin/login" className="hover:text-amber-400 transition-colors flex items-center gap-1 font-semibold text-amber-500/90">
+              <Lock className="w-3 h-3" />
+              <span>Admin Login</span>
             </Link>
           </div>
         </div>

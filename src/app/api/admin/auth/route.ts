@@ -75,8 +75,23 @@ export async function POST(request: NextRequest) {
   }
 }
 
+export async function GET() {
+  try {
+    const cookieStore = await cookies();
+    const sessionCookie = cookieStore.get('regis_admin_session');
+    if (!sessionCookie?.value) {
+      return NextResponse.json({ authenticated: false }, { status: 401 });
+    }
+    const session = JSON.parse(sessionCookie.value);
+    return NextResponse.json({ authenticated: true, user: session });
+  } catch {
+    return NextResponse.json({ authenticated: false }, { status: 401 });
+  }
+}
+
 export async function DELETE() {
   const cookieStore = await cookies();
   cookieStore.delete('regis_admin_session');
   return NextResponse.json({ success: true, message: 'Logged out successfully' });
 }
+

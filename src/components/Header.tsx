@@ -21,6 +21,7 @@ import {
   PhoneCall,
   ShieldCheck,
   Handshake,
+  Lock,
 } from 'lucide-react';
 import { useCurrency, CURRENCIES, CurrencyCode } from '@/context/CurrencyContext';
 import { useTheme } from '@/context/ThemeContext';
@@ -96,6 +97,15 @@ export function Header() {
             </Link>
             <Link href="/contact-us" className="text-amber-400 hover:text-amber-300 transition-colors">
               BOOK INSPECTION
+            </Link>
+            <span className="text-slate-600 hidden sm:inline">|</span>
+            <Link
+              href="/admin/login"
+              className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-amber-400 hover:text-white bg-amber-500/15 hover:bg-amber-500/30 border border-amber-500/35 transition-all font-bold tracking-wide"
+              title="Superadmin Login Portal"
+            >
+              <Lock className="w-3 h-3 text-amber-400" />
+              <span>ADMIN LOGIN</span>
             </Link>
           </div>
         </div>
@@ -399,19 +409,20 @@ export function Header() {
             )}
           </div>
 
-          {/* Admin CMS Portal Link for Regis Staff */}
+          {/* Admin Login Button */}
           <Link
-            href="/admin"
-            className="hidden md:inline-flex items-center gap-1.5 font-bold rounded-full text-xs px-3.5 h-9 bg-amber-500/15 text-amber-400 hover:bg-amber-500/25 border border-amber-500/30 transition-colors"
+            href="/admin/login"
+            className="inline-flex items-center gap-1.5 font-bold rounded-full text-xs px-3.5 h-9 bg-slate-900/90 hover:bg-slate-800 text-amber-400 hover:text-amber-300 border border-amber-500/40 hover:border-amber-400 shadow-sm transition-all"
+            title="Login to Regis Admin Account"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-            <span>Admin CMS</span>
+            <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+            <span>Admin Login</span>
           </Link>
 
           {/* Primary CTA: Book Site Inspection */}
           <Link
             href="/contact-us"
-            className="inline-flex items-center gap-2 justify-center font-bold rounded-full text-xs sm:text-sm px-4 sm:px-5 h-9 sm:h-10 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md shadow-amber-500/20 transition-all"
+            className="hidden sm:inline-flex items-center gap-2 justify-center font-bold rounded-full text-xs sm:text-sm px-4 sm:px-5 h-9 sm:h-10 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 hover:from-amber-400 hover:to-amber-500 shadow-md shadow-amber-500/20 transition-all"
           >
             <CalendarCheck className="w-4 h-4" />
             <span>Book Inspection</span>
@@ -447,6 +458,26 @@ export function Header() {
               >
                 <X className="w-5 h-5" />
               </button>
+            </div>
+
+            {/* Admin Login Quick Access Card */}
+            <div className="pt-3 pb-1">
+              <Link
+                href="/admin/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/20 via-amber-600/10 to-transparent border border-amber-500/35 text-amber-400 hover:text-white transition-all shadow-sm group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-amber-500/25 border border-amber-500/40 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                    <Lock className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-white text-xs font-bold">Admin Account Login</div>
+                    <div className="text-[11px] text-amber-400/90 font-medium">Manage properties, CMS & leads</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
             </div>
 
             {/* Drawer Links */}
@@ -524,12 +555,15 @@ export function Header() {
                 <ArrowRight className="w-4 h-4 text-amber-500" />
               </Link>
               <Link
-                href="/admin"
-                className="flex items-center justify-between py-2 border-b border-[var(--border)] text-slate-400 font-medium"
+                href="/admin/login"
+                className="flex items-center justify-between py-2 border-b border-[var(--border)] text-amber-400 font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Management CMS Portal</span>
-                <ArrowRight className="w-4 h-4 text-slate-400" />
+                <span className="flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-amber-400" />
+                  <span>Admin Portal Login</span>
+                </span>
+                <ArrowRight className="w-4 h-4 text-amber-400" />
               </Link>
             </div>
 
