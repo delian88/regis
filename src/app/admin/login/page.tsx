@@ -8,10 +8,8 @@ import {
   Lock,
   Mail,
   ArrowRight,
-  Building2,
-  Database,
-  CheckCircle2,
   AlertCircle,
+  CheckCircle2,
   Eye,
   EyeOff,
 } from 'lucide-react';
@@ -165,12 +163,9 @@ export default function AdminLoginPage() {
               </div>
 
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <label className="text-xs font-bold text-slate-300">
-                    Security Password
-                  </label>
-                  <span className="text-[11px] text-amber-400 font-medium">Supabase Auth Protected</span>
-                </div>
+                <label className="text-xs font-bold text-slate-300 block">
+                  Security Password
+                </label>
                 <div className="relative">
                   <Lock className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
                   <input
@@ -198,21 +193,10 @@ export default function AdminLoginPage() {
                 disabled={loading}
                 className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-lg shadow-amber-500/25 transition-all active:scale-[0.98] disabled:opacity-50 cursor-pointer"
               >
-                <span>{loading ? 'Authenticating with Supabase...' : 'Enter Admin Dashboard'}</span>
+                <span>{loading ? 'Authenticating...' : 'Enter Admin Dashboard'}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
-
-            {/* Database status indicator */}
-            <div className="pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
-              <div className="flex items-center gap-1.5">
-                <Database className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Supabase PostgreSQL: Connected</span>
-              </div>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
-                Live DB
-              </span>
-            </div>
           </div>
         </div>
       </main>

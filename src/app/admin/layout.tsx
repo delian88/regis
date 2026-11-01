@@ -277,7 +277,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              Supabase Connected
+              System Online
             </span>
             <span className="text-xs text-slate-400">|</span>
             <span className="text-xs text-slate-300">
