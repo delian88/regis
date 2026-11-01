@@ -16,9 +16,9 @@ async function check() {
   console.log('Twitter Card:', twitterCard ? twitterCard[1] : 'NOT FOUND');
   console.log('Icons found:', icons);
   
-  // Also check if any 'Sparkles' SVG exists in HTML
-  const hasSparkleSvg = html.includes('lucide-sparkles') || html.includes('sparkle');
-  console.log('Has sparkle reference in live HTML:', hasSparkleSvg);
+  // Check if Admin Login links exist in HTML
+  const adminLoginMatches = (html.match(/href="\/admin\/login"/g) || []).length;
+  console.log('Admin login links count in live HTML:', adminLoginMatches);
 }
 
 check().catch(console.error);
