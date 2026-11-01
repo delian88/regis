@@ -75,26 +75,26 @@ export function PropertyRequestsClient({ initialRequests }: PropertyRequestsClie
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       {/* Top CTA Banner */}
-      <div className="rounded-2xl bg-gradient-to-r from-red-600 to-rose-700 text-white p-6 sm:p-8 mb-8 shadow-lg relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="rounded-3xl bg-gradient-to-r from-slate-950 via-[#070B16] to-slate-900 text-white p-6 sm:p-8 mb-8 shadow-xl border border-white/10 relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="relative z-10 max-w-2xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.6875rem] font-bold bg-white/20 text-white mb-3 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[0.6875rem] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-3 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>CONNECT WITH CLIENTS FAST</span>
+            <span>REGIS CLIENT ACQUISITION DESK</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-            Property Requests in Nigeria
+          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
+            Client Property Inquiries & Custom Requests
           </h1>
-          <p className="mt-1 text-xs sm:text-sm text-red-100 leading-relaxed">
-            Real prospective tenants, buyers, and corporate investors looking for specific apartments, houses, commercial spaces, and land. Contact seekers directly to close deals quickly.
+          <p className="mt-1 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Verified requirements from clients seeking custom turnkey construction, luxury duplexes in Guzape and Mbora, and serviced land plots across Abuja.
           </p>
         </div>
         <div className="relative z-10 shrink-0">
           <Link
             href="/requests/create"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold bg-white text-red-600 hover:bg-red-50 shadow-md transition-all active:scale-95"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md transition-all active:scale-95"
           >
             <PlusCircle className="w-4 h-4" />
-            <span>Post a Free Request</span>
+            <span>Submit a Custom Request</span>
           </Link>
         </div>
       </div>

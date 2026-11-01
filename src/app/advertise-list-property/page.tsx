@@ -76,15 +76,15 @@ export default function AdvertiseListPropertyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-400 mb-2">
-              <PlusCircle className="w-3.5 h-3.5" />
-              <span>POST A PROPERTY FREE</span>
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 text-amber-500 mb-3 border border-amber-500/20">
+              <Building2 className="w-3.5 h-3.5" />
+              <span>PARTNER WITH REGIS INTEGRATED SERVICES</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[var(--foreground-strong)] tracking-tight">
-              List Your Property on Regis Real Estate Portal
+              Submit Property & Land for Joint Venture Development
             </h1>
-            <p className="mt-2 text-xs sm:text-sm text-[var(--foreground-muted)]">
-              Reach over 2 million monthly property buyers, tenants, and investors across Nigeria and in the diaspora.
+            <p className="mt-2 text-xs sm:text-sm text-[var(--foreground-muted)] max-w-xl mx-auto">
+              Do you own titled land or prime property in Abuja, Lagos, or key urban centres? Partner with Regis Integrated Services Limited for turnkey construction, luxury estate joint ventures, or outright acquisition.
             </p>
           </div>
 
@@ -93,10 +93,10 @@ export default function AdvertiseListPropertyPage() {
             <div className="p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-center space-y-3">
               <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
               <h2 className="text-xl font-bold text-emerald-800 dark:text-emerald-300">
-                Property Submitted Successfully!
+                Joint Venture Proposal Received!
               </h2>
               <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-400 max-w-md mx-auto">
-                Your listing has been submitted for automated review and will be published live shortly. Redirecting to listings...
+                Your land / property details have been submitted directly to Regis Integrated Services Limited. Our land acquisition and engineering directorate will review your title documents and contact you within 48 hours.
               </p>
             </div>
           ) : (
@@ -376,15 +376,15 @@ export default function AdvertiseListPropertyPage() {
               <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between">
                 <div className="flex items-center gap-1.5 text-xs text-emerald-600 font-semibold">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>Free standard listing</span>
+                  <span>Direct Developer Evaluation (CAC & COREN Certified)</span>
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-6 py-3 rounded-full text-xs font-bold bg-red-600 hover:bg-red-700 text-white shadow-md transition-all active:scale-95 disabled:opacity-50 flex items-center gap-2"
+                  className="px-6 py-3 rounded-full text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md transition-all active:scale-95 disabled:opacity-50 flex items-center gap-2"
                 >
-                  <span>{submitting ? 'Submitting...' : 'Publish Property'}</span>
+                  <span>{submitting ? 'Submitting...' : 'Submit Proposal to Regis Directorate'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

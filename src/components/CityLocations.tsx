@@ -156,19 +156,19 @@ export function CityLocations() {
           ))}
         </div>
 
-        {/* Q4 Market Report Banner - Exact Nigeria Property Centre feature */}
-        <div className="mt-10 relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-600 via-rose-700 to-indigo-950 p-6 sm:p-8 text-white shadow-xl">
+        {/* Q4 Market Report Banner */}
+        <div className="mt-10 relative overflow-hidden rounded-2xl bg-gradient-to-r from-amber-600 via-amber-700 to-slate-950 p-6 sm:p-8 text-white shadow-xl">
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-sm text-white mb-3">
                 <TrendingUp className="w-3.5 h-3.5" />
-                <span>NIGERIA PROPERTY MARKET REPORT</span>
+                <span>REGIS RESEARCH & MARKET REPORT</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white">
-                Nigeria Real Estate Market Trends & Price Index
+                Abuja Real Estate Market Trends & Price Index
               </h3>
               <p className="mt-2 text-sm text-white/90 leading-relaxed">
-                Download the latest verified quarterly research covering average land prices, rental yields, luxury residential demand, and emerging growth corridors across Lagos, Abuja, Ibadan, and Port Harcourt.
+                Download the latest verified quarterly research covering average land prices, rental yields, luxury residential demand, and emerging growth corridors across Guzape, Mbora, Lugbe, and Idu.
               </p>
             </div>
 
@@ -177,7 +177,7 @@ export function CityLocations() {
                 href="#download-report"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('The Q4 Nigeria Property Market Report is being compiled with real-time price indexes. Register your email in the newsletter to receive the PDF copy directly!');
+                  alert('The Regis Real Estate Market Report is being compiled with real-time price indexes. Register your email in the newsletter to receive the PDF copy directly!');
                 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-extrabold bg-white text-slate-950 hover:bg-slate-100 shadow-md transition-all active:scale-95"
               >

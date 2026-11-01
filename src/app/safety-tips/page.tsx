@@ -48,9 +48,9 @@ export default function SafetyTipsPage() {
     },
     {
       icon: ShieldCheck,
-      title: 'Transact with Accredited Agents & Developers',
-      description: 'Look for verified and accredited developers and certified estate surveyors. Prioritize firms registered with the Corporate Affairs Commission (CAC) and licensed with bodies like NIESV (Nigerian Institution of Estate Surveyors and Valuers) or REDAN.',
-      action: 'Check an agent\'s listing track record and customer reviews on our platform.',
+      title: 'Transact Directly with Accredited Corporate Developers',
+      description: 'Look for verified and accredited developers and certified builders. Prioritize firms registered with the Corporate Affairs Commission (CAC) and licensed with bodies like COREN or REDAN.',
+      action: 'Deal directly with certified Regis Integrated Services project directors and verify title deeds with AGIS and FHA.',
     },
   ];
 

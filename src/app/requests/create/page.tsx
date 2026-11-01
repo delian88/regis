@@ -61,15 +61,15 @@ export default function CreatePropertyRequestPage() {
       <main className="flex-1 py-10 sm:py-14">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-400 mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-400 mb-2">
               <ClipboardList className="w-3.5 h-3.5" />
-              <span>FREE FOR PROPERTY SEEKERS</span>
+              <span>REGIS CUSTOM BUILD & ACQUISITION BRIEF</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[var(--foreground-strong)] tracking-tight">
-              Post a Property Request
+              Submit Your Property Requirement
             </h1>
             <p className="mt-2 text-xs sm:text-sm text-[var(--foreground-muted)]">
-              Can&apos;t find what you are looking for? Let over 15,000 verified estate agents and property owners find it for you.
+              Can&apos;t find your exact specification? Submit your custom architectural design brief or acquisition requirements directly to the Regis engineering and project directorate.
             </p>
           </div>
 
@@ -77,10 +77,10 @@ export default function CreatePropertyRequestPage() {
             <div className="p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-center space-y-4">
               <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
               <h2 className="text-xl font-bold text-emerald-800 dark:text-emerald-300">
-                Property Request Submitted!
+                Requirement Submitted Successfully!
               </h2>
               <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-400">
-                Your requirement has been broadcast to accredited estate agents in {formData.state}. Interested agents with matching properties will contact you directly via phone or WhatsApp.
+                Your custom requirement has been received by Regis Integrated Services Limited. A designated project director will review your specifications and contact you directly via phone or WhatsApp.
               </p>
               <div className="pt-2">
                 <Link
@@ -269,16 +269,16 @@ export default function CreatePropertyRequestPage() {
 
               <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between">
                 <div className="flex items-center gap-1.5 text-xs text-slate-500">
-                  <Users className="w-4 h-4 text-red-500" />
-                  <span>Shared with verified agents only</span>
+                  <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                  <span>Strictly reviewed by Regis Project Directors</span>
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-6 py-2.5 rounded-full text-xs font-bold bg-red-600 hover:bg-red-700 text-white shadow transition-all active:scale-95 disabled:opacity-50"
+                  className="px-6 py-2.5 rounded-full text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow transition-all active:scale-95 disabled:opacity-50"
                 >
-                  {submitting ? 'Submitting...' : 'Post Request'}
+                  {submitting ? 'Submitting...' : 'Submit Specification to Regis'}
                 </button>
               </div>
             </form>

@@ -260,8 +260,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/agents/regis-integrated-services-limited" className="hover:text-white transition-colors">
-                  Regis Developer Profile
+                <Link href="/about-us" className="hover:text-white transition-colors">
+                  Corporate Profile & Heritage
                 </Link>
               </li>
               <li>

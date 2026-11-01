@@ -5,8 +5,8 @@ import { getAgents } from '@/db';
 import { AgentsDirectoryClient } from '../agents/AgentsDirectoryClient';
 
 export const metadata = {
-  title: 'Accredited Property Developers & Partners — Regis Integrated Services Limited',
-  description: 'Connect with premier real estate developers, building contractors, and master-planned community builders in Lagos, Abuja, and Nigeria.',
+  title: 'Strategic Alliances & Institutional Partners — Regis Integrated Services Limited',
+  description: 'Learn about Regis Integrated Services Limited alliances, including our partnership with the Federal Housing Authority (FHA) and FHA Mortgage Bank.',
 };
 
 export default async function DevelopersPage() {

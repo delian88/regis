@@ -5,8 +5,8 @@ import { getAgents } from '@/db';
 import { AgentsDirectoryClient } from './AgentsDirectoryClient';
 
 export const metadata = {
-  title: 'Real Estate Agents & Certified Surveyors — Regis Integrated Services Limited',
-  description: 'Find trusted and verified estate agents, chartered surveyors, and registered realtors in Lagos, Abuja, Port Harcourt, and across all Nigerian states.',
+  title: 'Project Directorate & Advisory Units — Regis Integrated Services Limited',
+  description: 'Connect directly with Regis Integrated Services Limited project directors, structural engineers, architectural designers, and mortgage advisory specialists.',
 };
 
 export default async function AgentsPage() {

@@ -26,6 +26,7 @@ export const metadata = {
 const DEVELOPMENTS = [
   {
     id: 'guzape-terrace',
+    propertyId: 1001,
     title: '6-Bedroom Luxury Terrace Duplex with Basement',
     location: 'Plot 22 Cadastral Zone A09, Guzape District (Main), Abuja',
     price: '₦500,000,000',
@@ -44,6 +45,7 @@ const DEVELOPMENTS = [
   },
   {
     id: 'fha-mbora-duplex',
+    propertyId: 1002,
     title: '5-Bedroom Semi-Detached Duplex',
     location: 'FHA Golden Jubilee Estate, Mbora District, Abuja',
     price: '₦120,000,000',
@@ -62,6 +64,7 @@ const DEVELOPMENTS = [
   },
   {
     id: 'fha-mbora-flats',
+    propertyId: 1003,
     title: '2 & 3-Bedroom Block of Flats',
     location: 'FHA Golden Jubilee Estate, Mbora District, Abuja',
     price: 'From ₦65,000,000 – ₦85,000,000',
@@ -80,6 +83,7 @@ const DEVELOPMENTS = [
   },
   {
     id: 'regis-royale',
+    propertyId: 1005,
     title: 'Regis Royale Estate Signature Showcase',
     location: 'Serene Residential Zone, Abuja',
     price: '₦350,000,000',
@@ -97,6 +101,7 @@ const DEVELOPMENTS = [
   },
   {
     id: 'lugbe-serviced-land',
+    propertyId: 1006,
     title: 'Lugbe Estate Serviced Land (250 & 500 SQMs)',
     location: 'Lugbe 1 Extension (Airport Road Corridor), Abuja',
     price: '₦3,500,000 – ₦7,000,000',
@@ -114,6 +119,7 @@ const DEVELOPMENTS = [
   },
   {
     id: 'idu-serviced-land',
+    propertyId: 1008,
     title: 'Idu Industrial Layout Serviced Land (250 & 500 SQMs)',
     location: 'Idu Industrial Area (Near Light Rail Terminal), Abuja',
     price: '₦3,500,000 – ₦7,000,000',
@@ -219,7 +225,7 @@ export default function ProjectsPage() {
 
                   <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-white/10">
                     <Link
-                      href={`/properties/${dev.slug}`}
+                      href={`/property/${dev.propertyId}`}
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-all hover:scale-105"
                     >
                       <span>View Specifications</span>

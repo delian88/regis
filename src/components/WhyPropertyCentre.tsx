@@ -24,9 +24,9 @@ const FEATURES = [
   },
   {
     icon: Gift,
-    title: 'Free for Property Seekers',
-    description: 'Nigeria Property Centre is 100% free to search, view photos, compare prices, and contact listing agents. No registration fee required.',
-    highlight: 'Zero platform commission',
+    title: 'Direct Developer Ownership',
+    description: 'Deal directly with Regis Integrated Services Limited. No third-party agency markup, transparent deed delivery, and dedicated customer service.',
+    highlight: 'Zero agent markup',
   },
 ];
 
@@ -36,14 +36,14 @@ export function WhyPropertyCentre() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-400 mb-2">
-            <span>THE TRUSTED MARKETPLACE</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-500 mb-2">
+            <span>EXCLUSIVE BUILDER & DEVELOPER</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--foreground-strong)] tracking-tight">
-            Why Use Nigeria Property Centre?
+            Why Choose Regis Integrated Services Limited?
           </h2>
           <p className="mt-2 text-sm sm:text-base text-[var(--foreground-muted)]">
-            We are Nigeria&apos;s leading property website, connecting millions of property buyers, tenants, and investors with legitimate owners and trusted professionals.
+            Over a decade of architectural excellence, structural integrity, and institutional partnership with the Federal Housing Authority (FHA).
           </p>
         </div>
 

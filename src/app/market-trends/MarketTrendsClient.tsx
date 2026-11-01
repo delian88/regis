@@ -146,15 +146,15 @@ export function MarketTrendsClient() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       {/* Hero Header */}
       <div className="mb-10 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700 dark:bg-red-950/60 dark:text-red-400 mb-3">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-500 mb-3 border border-amber-500/20">
           <TrendingUp className="w-3.5 h-3.5" />
-          <span>NIGERIAN REAL ESTATE INTELLIGENCE & PRICE INDEX</span>
+          <span>REGIS REAL ESTATE INTELLIGENCE & PRICE INDEX</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-black text-[var(--foreground-strong)] tracking-tight">
-          Nigeria Property Market Trends
+          Abuja & Nigeria Property Market Trends
         </h1>
         <p className="mt-2 text-sm text-[var(--foreground-muted)] leading-relaxed">
-          Accurate, transaction-backed benchmark pricing, rental yields, time-on-market metrics, and price growth rates across Nigeria&apos;s prime residential and commercial corridors.
+          Accurate, development-backed benchmark pricing, rental yields, time-on-market metrics, and capital appreciation rates curated by Regis Integrated Services Limited.
         </p>
       </div>
 
